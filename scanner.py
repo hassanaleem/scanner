@@ -49,7 +49,7 @@ for file in glob.glob("*.jpg"):
     main_func(image, file)
 
 with open("result.pdf","wb") as f:
-    f.write(img2pdf.convert(glob.glob("*.png")))
+    f.write(img2pdf.convert(sorted(glob.glob("*.png"))))
 
 for file in glob.glob("*.png"):
     os.remove(file)
