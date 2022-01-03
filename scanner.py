@@ -44,7 +44,7 @@ def main_func(image, file):
     cv2.imwrite(fname, result_img)
 
 
-for file in glob.glob("*.jpg"):
+for file in sorted(glob.glob("*.jpg")):
     image = cv2.imread(file)
     main_func(image, file)
 
